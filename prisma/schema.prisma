@@ -1,0 +1,60 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum OrderStatus {
+  PENDING
+  PREPARING
+  READY
+  COMPLETED
+}
+
+enum ApplicantStatus {
+  NEW
+  SHORTLISTED
+  INTERVIEWED
+  HIRED
+  REJECTED
+}
+
+model MenuItem {
+  id          String   @id @default(cuid())
+  name        String
+  category    String   // "Coffee", "Coffee Sweets", "Pastry", "Signature"
+  price       Float
+  description String   @db.Text
+  image       String   @db.Text // Supports Base64 or local upload URI
+  isCoffeeSweet Boolean @default(false)
+  isAvailable Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Order {
+  id          String      @id @default(cuid())
+  orderNumber String      @unique
+  customerName String
+  phone       String
+  pickupTime  String
+  total       Float
+  itemsJson   String      @db.Text // Store item list, milk options & temperature
+  status      OrderStatus @default(PENDING)
+  createdAt   DateTime    @default(now())
+}
+
+model Application {
+  id            String          @id @default(cuid())
+  roleTitle     String
+  name          String
+  email         String
+  phone         String
+  availability  String
+  experience    String          @db.Text
+  status        ApplicantStatus @default(NEW)
+  createdAt     DateTime        @default(now())
+}
