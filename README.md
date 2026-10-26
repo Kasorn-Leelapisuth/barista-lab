@@ -1,8 +1,7 @@
 # Barista Lab — Specialty Coffee Roastery & Pastry Platform
 
 > **Live Demo:** [https://barista-lab.vercel.app/](https://barista-lab.vercel.app/)  
-> **Location:** Cremorne, Melbourne, VIC  
-> **Founder & Head of Coffee:** Kasorn Leelapisuth (Kay)
+> **Created by:** Kasorn Leelapisuth (Kay)
 
 Barista Lab is a full-stack e-commerce storefront, online pre-order system, and store management platform built for a modern specialty coffee roastery and artisan dessert kitchen. The application combines a 5-page customer-facing interface with a passcode-authenticated Kitchen Display System (KDS), dynamic photo & menu management, and an applicant tracking system (ATS).
 
