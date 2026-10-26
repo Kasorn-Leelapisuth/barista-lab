@@ -19,7 +19,7 @@ Barista Lab is a full-stack e-commerce storefront, online pre-order system, and 
 - **Express Pre-Order Engine:** Select custom milk alternatives (Minor Figures Oat, Bonsoy, Full Cream) and pickup times.
 - **Thermal Receipt Generator:** Automatically generates a café-style itemized tax docket with GST breakdown, order barcodes, and one-click PDF printing (`window.print()`).
 
-### 🛠️ Staff & Store Manager Portal (`Passcode: barista123`)
+### Staff & Store Manager Portal (`Passcode: barista123`)
 - **Live Kitchen Display System (KDS):** Real-time incoming orders with stage progressions (`Pending` ➔ `Ready` ➔ `Completed`).
 - **Dynamic Menu & Photo Management:** Full CRUD operations allowing staff to add new items, modify pricing/descriptions, or upload real photos directly from their device (stored via Base64/URI).
 - **Applicant Tracking System (ATS):** Review candidate applications, availability schedules, contact information, and hospitality experience.
